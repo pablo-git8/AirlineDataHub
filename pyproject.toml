@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "airline-data-hub"
+version = "0.1.0"
+description = "Streamlines aviation data analysis and warehousing, combining Python, SQL, and AWS for EDA, cleaning, and modeling. This repo guides from CSV ingestion to Redshift analytics, highlighting best practices in data engineering."
+authors = ["Pablo Ruiz Lopez <pablo.devdt@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+boto3 = "^1.33.7"
+pandas = "^2.1.4"
+jupyter = "^1.0.0"
+psycopg = {extras = ["binary"], version = "^3.1.18"}
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+ruff = "^0.1.9"
+mypy = "^1.5.8"
+pytest = "^7.4.2"
+pytest-cov = "^4.0.0"
+pytest-env = "^0.8.1"
+pytest-json-report = "^1.5.0"
+gitpython = "^3.1.40"
+moto = "^4.2.2"
+hypothesis = "^6"
+
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+asyncio_mode="auto"
+minversion = "7.0"
+addopts = "-p no:warnings"
+testpaths = [
+    "tests",
+]
+
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP",  # pyupgrade
+]
+ignore = []
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

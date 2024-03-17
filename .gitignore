@@ -1,0 +1,9 @@
+# Environment Variables & Credentials
+.env
+.aws
+
+# Data
+/data/raw/**
+/data/processed/**
+!/data/raw/raw_data_path.md
+!/data/processed/processed_data_path.md

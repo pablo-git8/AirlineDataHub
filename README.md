@@ -23,7 +23,7 @@ Good practices in data engineering were followed, with a particular focus on the
 </p>
 
 ## Repository Structure
-For a detailed explanation of the repository structure, please refer to the [Repository Structure Documentation](docs/repo_structure.md).
+For a detailed explanation of the repository structure, please refer to the [Repository Structure Documentation](docs/repo-structure.md).
 
 ## Setup Instructions
 1. **Clone the Repository:**
@@ -33,14 +33,14 @@ For a detailed explanation of the repository structure, please refer to the [Rep
    ```
 
 2. **Environment Setup:**
-   - Ensure Python and Poetry are installed on your system.
+   - Ensure [Python](https://www.python.org/downloads/) and [Poetry](https://python-poetry.org/docs/) are installed on your system.
    - Install project dependencies using Poetry:
      ```
      poetry install
      ```
 
 3. **AWS S3 and Redshift Configuration:**
-   - Configure your AWS CLI with the necessary access credentials.
+   - Configure your [AWS CLI](https://aws.amazon.com/cli/) with the necessary access credentials.
    - Ensure there is an existent S3 bucket with the data
    - Ensure your AWS Redshift cluster is set up and accessible.
 
@@ -87,7 +87,7 @@ For more detailed information about the project overview, data model, and specif
 - **Project Overview**: For a comprehensive overview of the project, including its goals, methodologies, and technologies used, check out `project_overview.md`.
 
 ## Docker and Docker Compose (Optional)
-If you prefer to use Docker, ensure Docker and Docker Compose are installed.
+If you prefer to use Docker, ensure [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) are installed.
 
 To build the Docker image for running the pipeline, follow these steps:
 

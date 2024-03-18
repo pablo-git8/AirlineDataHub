@@ -16,7 +16,7 @@
 
 Starting with the ingestion of CSV files from AWS S3 buckets, the project employs ETL pipelines that facilitate exploratory data analysis (EDA) to uncover initial insights but also engage in comprehensive data modeling to structure data effectively for analysis. Once processed, this data is loaded into AWS Redshift, leveraging its powerful analytics capabilities. 
 
-Good practices in data engineering were followed, ensuring the development of a data model that is inherently optimized for analysis:
+Good practices in data engineering were followed, with a particular focus on the development of a data model that is inherently optimized for analysis:
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/pablo-git8/AirlineDataHub/main/docs/ER_diagram.jpg" alt="400" width="600"/>

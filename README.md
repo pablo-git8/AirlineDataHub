@@ -93,7 +93,7 @@ To build the Docker image for running the pipeline, follow these steps:
 
   1. Navigate to the root of the repository where the `docker` directory is located:
 
-    ```bash
+    ```
     cd path/to/AirlineDataHub
     ```
   
@@ -101,19 +101,19 @@ To build the Docker image for running the pipeline, follow these steps:
 
   3. Build the Docker image using the Dockerfile in the `docker` directory. Replace `airlinedatahub-image` with a name of your choice for the Docker image:
 
-    ```bash
+    ```
     docker build -f docker/Dockerfile -t airlinedatahub-image .
     ```
 
   4. Once the Docker image is built, you can run the container using the following command. This will execute the pipeline script within the container as specified in the Dockerfile's `CMD` instruction.
 
-    ```bash
+    ```
     docker run --env-file /path/to/your/.env airlinedatahub-image
     ```
   
   5. For running it with Docker Compose, simply run:
 
-    ```bash
+    ```
     docker-compose up --build
     ```
 

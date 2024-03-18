@@ -41,13 +41,6 @@ For a detailed explanation of the repository structure, please refer to the [Rep
 4. **Environment Variables:**
    - Copy the `.env.example` file to `.env` and update it with your actual configuration details.
 
-5. **Docker (Optional):**
-   - If you prefer to use Docker, ensure Docker and Docker Compose are installed.
-   - Build and run your containers (this will run the full pipeline):
-     ```
-     docker-compose up --build
-     ```
-
 ## Usage
 - **Running the Pipeline:**
   To execute the full data pipeline, navigate to the `pipeline` directory and run:
@@ -86,6 +79,37 @@ For more detailed information about the project overview, data model, and specif
 - **ER Diagram and Database Schema**: Visual representations of the data model and database schema are available in `ER_diagram.jpg` and `db_schema.pdf`, respectively.
 
 - **Project Overview**: For a comprehensive overview of the project, including its goals, methodologies, and technologies used, check out `project_overview.md`.
+
+## Docker and Docker Compose (Optional)
+If you prefer to use Docker, ensure Docker and Docker Compose are installed.
+
+To build the Docker image for running the pipeline, follow these steps:
+
+  1. Navigate to the root of the repository where the `docker` directory is located:
+
+    ```bash
+    cd path/to/AirlineDataHub
+    ```
+  
+  2. Create a .env file that contains all the necessary environment variables (check `.env.example` file for guidance)
+
+  3. Build the Docker image using the Dockerfile in the `docker` directory. Replace `airlinedatahub-image` with a name of your choice for the Docker image:
+
+    ```bash
+    docker build -f docker/Dockerfile -t airlinedatahub-image .
+    ```
+
+  4. Once the Docker image is built, you can run the container using the following command. This will execute the pipeline script within the container as specified in the Dockerfile's `CMD` instruction.
+
+    ```bash
+    docker run --env-file /path/to/your/.env airlinedatahub-image
+    ```
+  
+  5. For running it with Docker Compose, simply run:
+
+    ```bash
+    docker-compose up --build
+    ```
 
 ## License
 `AirlineDataHub` is released under the [MIT License](LICENSE).

@@ -2,6 +2,7 @@ AirTrafficInsights/
 ├── data/                       # Data folder for raw and processed datasets
 │   ├── raw/                    # Raw data files, e.g., CSV files from S3 (optional, for future needs)
 │   └── processed/              # Processed data files, post-cleaning (optional, for future needs)
+│   └── country_code_map.json   # Helper file for validation tests (country code mapping)
 │
 ├── src/                        # Source code for the project
 │   ├── __init__.py             # src: Python module
@@ -9,7 +10,7 @@ AirTrafficInsights/
 │   └── clean_load.py           # Script for cleaning data and loading into Redshift
 │
 ├── notebooks/                  # Jupyter notebooks for EDA and prototyping
-│   └── data_exploration.ipynb  #EDA
+│   └── data_exploration.ipynb  # EDA
 │
 ├── tests/                      # Unit testing cases for the project
 │   ├── __init__.py             # test: Python module

@@ -38,17 +38,21 @@ def create_aggregation_table():
         ORDER BY
             SUM(f.Passengers) DESC;
     """
-    
-    # Connect to the SQLite database
-    with sqlite3.connect('../data/processed/aig_data_warehouse.db') as conn:
-        cursor = conn.cursor()
-        # Create the aggregation table
-        cursor.execute(create_table_query)
-        # Insert data
-        cursor.execute(aggregation_query)
-        
-        # Commit the changes to the database
-        conn.commit()
+    try:
+        # Connect to the SQLite database
+        with sqlite3.connect('../data/processed/aig_data_warehouse.db') as conn:
+            cursor = conn.cursor()
+            # Create the aggregation table
+            cursor.execute(create_table_query)
+            # Insert data
+            cursor.execute(aggregation_query)
+            
+            # Commit the changes to the database
+            conn.commit()
+    except sqlite3.Error as e:
+        print(f"A DDBB error occurred: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 
 if __name__ == "__main__":

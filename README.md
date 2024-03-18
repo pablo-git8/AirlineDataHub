@@ -93,7 +93,6 @@ To build the Docker image for running the pipeline, follow these steps:
 
   1. Navigate to the root of the repository where the docker/ directory is located:
 
-    ```
     cd path/to/AirlineDataHub
   
   2. Create a .env file that contains all the necessary environment variables (check `.env.example` file for guidance)

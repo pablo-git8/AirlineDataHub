@@ -4,13 +4,13 @@
 cd ../src/
 
 # Ensure scripts are executable
-chmod +x ingestion.py transforms.py loading-sqlite.py
+chmod +x ingestion.py transforms.py loading_sqlite.py loading_redshift.py
 
 # Run the Python scripts in order
 python ingestion.py
 python transforms.py
-python loading-sqlite.py
-python loading-redshift.py
+python loading_sqlite.py
+python loading_redshift.py
 
 # Return to the original directory
 cd -

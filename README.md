@@ -91,23 +91,23 @@ If you prefer to use Docker, ensure [Docker](https://www.docker.com/) and [Docke
 
 To build the Docker image for running the pipeline, follow these steps:
 
-  1. Navigate to the root of the repository where the docker/ directory is located:
+1. Navigate to the root of the repository where the docker/ directory is located:
 
-    cd path/to/AirlineDataHub
+  cd path/to/AirlineDataHub
   
-  2. Create a .env file that contains all the necessary environment variables (check `.env.example` file for guidance)
+2. Create a .env file that contains all the necessary environment variables (check `.env.example` file for guidance)
 
-  3. Build the Docker image using the Dockerfile in the `docker` directory. Replace `airlinedatahub-image` with a name of your choice for the Docker image:
+3. Build the Docker image using the Dockerfile in the `docker` directory. Replace `airlinedatahub-image` with a name of your choice for the Docker image:
 
-    docker build -f docker/Dockerfile -t airlinedatahub-image .
+  docker build -f docker/Dockerfile -t airlinedatahub-image .
 
-  4. Once the Docker image is built, you can run the container using the following command. This will execute the pipeline script within the container as specified in the Dockerfile's `CMD` instruction.
+4. Once the Docker image is built, you can run the container using the following command. This will execute the pipeline script within the container as specified in the Dockerfile's `CMD` instruction.
 
-    docker run --env-file /path/to/your/.env airlinedatahub-image
+  docker run --env-file /path/to/your/.env airlinedatahub-image
   
-  5. For running it with Docker Compose, simply run:
+5. For running it with Docker Compose, simply run:
 
-    docker-compose up --build
+  docker-compose up --build
 
 ## License
 `AirlineDataHub` is released under the [MIT License](LICENSE).

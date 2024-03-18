@@ -69,6 +69,10 @@ For a detailed explanation of the repository structure, please refer to the [Rep
   ../src/loading-sqlite.py   # Data modeling. Creates transitory DDBB for later copy to a Data Warehouse
   ../src/loading-redshift.py # Loads the data to AWS Redshift
   ```
+  Additionally the following script creates an aggregated table optimized for showing the number of passengers by `OpCo`, `Country`, `Region`, `Year`, `Quarter of the year (Q1, Q2, Q3 or Q4)`:
+  ```
+  ../src/create_agg_table.py # Creates aggregated table into SQL DDBB
+  ```
 
 - **Testing:**
   Run unit tests to ensure reliability:

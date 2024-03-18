@@ -22,12 +22,16 @@ AirTrafficInsights/
 │   └── test_clean_load.py      # Testing test_clean_load script
 │
 ├── docs/                       # Documentation for the project
-│   ├── ER_diagram.png          # ER diagram for the data model
+│   ├── ER_diagram.jpg          # ER diagram for the data model
+│   ├── db_shcema.pdf           # Database documentation
+│   ├── repo_structure.md       # Repository structure
 │   └── project_overview.md     # Overview and documentation of the project
-│   └── repo_structure.md       # Repository structure
 │
 ├── docker/                     # Folder for future needs of more Dockerfiles
 │   └── Dockerfile              # Dockerfile for easy deployment and reproducibility
+│
+├── pipeline/                   # Pipelines to execute
+│   └── run-pipeline.sh         # Run the full pipeline bash file
 │
 ├── .env.example                # Example environment variables file (.env is gitignored)
 ├── pyproject.toml              # Poetry dependency file

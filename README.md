@@ -19,7 +19,7 @@ Starting with the ingestion of CSV files from AWS S3 buckets, the project employ
 Good practices in data engineering were followed, ensuring the development of a data model that is inherently optimized for analysis:
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/pablo-git8/AirlineDataHub/main/docs/ER_diagram.jpg" alt="200" width="300"/>
+	<img src="https://raw.githubusercontent.com/pablo-git8/AirlineDataHub/main/docs/ER_diagram.jpg" alt="400" width="600"/>
 </p>
 
 ## Repository Structure

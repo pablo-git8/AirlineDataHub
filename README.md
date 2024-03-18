@@ -14,7 +14,13 @@
 ## Overview
 `AirlineDataHub` is a comprehensive data engineering solution designed to simplify the analysis and warehousing of aviation data. By leveraging the power of Python for data extraction and cleaning, SQL for data storage and manipulation, and AWS services for scalable data storage and analytics, this repository provides a robust foundation for data handling in the aviation sector.
 
-From ingesting CSV files from AWS S3 buckets, running ETL pipelines to performing exploratory data analysis (EDA) and loading processed data into AWS Redshift for advanced analytics, `AirlineDataHub` encapsulates best practices in data engineering to facilitate insightful aviation data analysis.
+Starting with the ingestion of CSV files from AWS S3 buckets, the project employs ETL pipelines that facilitate exploratory data analysis (EDA) to uncover initial insights but also engage in comprehensive data modeling to structure data effectively for analysis. Once processed, this data is loaded into AWS Redshift, leveraging its powerful analytics capabilities. 
+
+Good practices in data engineering were followed, ensuring the development of a data model that is inherently optimized for analysis:
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/pablo-git8/AirlineDataHub/main/docs/ER_diagram.jpg" alt="200" width="300"/>
+</p>
 
 ## Repository Structure
 For a detailed explanation of the repository structure, please refer to the [Repository Structure Documentation](docs/repo_structure.md).

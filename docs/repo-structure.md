@@ -2,7 +2,7 @@ AirTrafficInsights/
 ├── data/                       # Data folder for raw and processed datasets
 │   ├── raw/                    # Raw data files, e.g., CSV files from S3 (optional, for future needs)
 │   └── processed/              # Processed data files, post-cleaning (optional, for future needs)
-│   └──country_code_map.json   # Helper file for validation tests (country code mapping)
+│   └──country_code_map.json    # Helper file for validation tests (country code mapping)
 │
 ├── sql/                        # SQL queries used in general
 │   ├── schema_create.sql       # Queries for schema creation

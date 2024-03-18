@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./pipeline:/app/pipeline
+    env_file:
+      - ./.env
+    command: ["/bin/bash", "-c", "/app/pipeline/run-pipeline.sh"]

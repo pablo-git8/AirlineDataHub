@@ -1,0 +1,22 @@
+# Environment Variables & Credentials
+.env
+.aws
+
+# Data
+/data/raw/**
+/data/processed/**
+!/data/raw/raw_data_path.md
+!/data/processed/processed_data_path.md
+
+# IDEs and Editors
+.idea
+.vscode
+
+# Caches and Packets
+.ruff_cache
+__pycache__
+.pytest_cache
+.mypy_cache
+
+# Jupyter
+.ipynb_checkpoints

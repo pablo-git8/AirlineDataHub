@@ -22,11 +22,11 @@ def ingest_data():
     s3 = boto3.client('s3')
 
     # Specify path to your file within the S3 bucket
-    bucket_name = os.getenv('BUCKET_NAME')
-    object_key = os.getenv('OBJECT_KEY')
+    BUCKET_NAME = os.getenv('BUCKET_NAME')
+    OBJECT_KEY = os.getenv('OBJECT_KEY')
 
     # Get the object from S3
-    csv_obj = s3.get_object(Bucket=bucket_name, Key=object_key)
+    csv_obj = s3.get_object(Bucket=BUCKET_NAME, Key=OBJECT_KEY)
 
     # Get the body of the object (the file content)
     body = csv_obj['Body']
